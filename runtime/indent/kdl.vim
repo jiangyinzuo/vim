@@ -2,16 +2,16 @@
 " Language:         KDL
 " Author:           Aram Drevekenin <aram@poor.dev>
 " Maintainer:       Yinzuo Jiang <jiangyinzuo@foxmail.com>
-" Last Change:      2024-06-16
+" Last Change:      2026-07-04
 
 " Only load this indent file when no other was loaded.
-if exists("b:did_indent")
+if exists('b:did_indent')
     finish
 endif
 let b:did_indent = 1
 
 setlocal indentexpr=KdlIndent()
-let b:undo_indent = "setlocal indentexpr<"
+let b:undo_indent = 'setlocal indentexpr<'
 
 function! KdlIndent(...)
   let line = substitute(getline(v:lnum), '//.*$', '', '')
@@ -19,10 +19,10 @@ function! KdlIndent(...)
   let previous = substitute(getline(previousNum), '//.*$', '', '')
 
   let l:indent = indent(previousNum)
-  if previous =~ "{" && previous !~ "}"
+  if previous =~# '{' && previous !~# '}'
     let l:indent += shiftwidth()
   endif
-  if line =~ "}" && line !~ "{"
+  if line =~# '}' && line !~# '{'
     let l:indent -= shiftwidth()
   endif
   return l:indent

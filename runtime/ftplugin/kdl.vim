@@ -2,9 +2,9 @@
 " Language:         KDL
 " Author:           Aram Drevekenin <aram@poor.dev>
 " Maintainer:       Yinzuo Jiang <jiangyinzuo@foxmail.com>
-" Last Change:      2024-06-10
+" Last Change:      2026-07-04
 
-if exists("b:did_ftplugin")
+if exists('b:did_ftplugin')
   finish
 endif
 
