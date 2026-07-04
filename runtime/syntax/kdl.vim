@@ -2,10 +2,10 @@
 " Language: KDL
 " Maintainer: Aram Drevekenin <aram@poor.dev>
 " Maintainer: Yinzuo Jiang <jiangyinzuo@foxmail.com>
-" Latest Revision: 2024-06-16
+" Latest Revision: 2026-07-04
 
 " quit when a syntax file was already loaded
-if exists("b:current_syntax")
+if exists('b:current_syntax')
   finish
 endif
 
@@ -43,6 +43,6 @@ hi def link kdlBool        Boolean
 hi def link kdlString      String
 hi def link kdlNumber      Number
 
-let b:current_syntax = "kdl"
+let b:current_syntax = 'kdl'
 
 " vim: sw=2 sts=2 et
